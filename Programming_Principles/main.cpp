@@ -1,7 +1,9 @@
 #include "std_lib_facilities.h"
 
-/*Part1: The Basics
-2. Hello, World!*/
+/*Programming: Principles and Practice Using C++ 2nd Edition.
+* Stroustrup, Peter
+Part1: The Basics of programming
+2. - Stroustroup Hello, World!*/
 
 void hello_world_drill1()
 {
@@ -23,7 +25,7 @@ void exercise0102()
     cout << "Levante-se da cadeira\n";
     cout << "Siga em frente e suba as escadas\n";
     cout << "quando chegar no descanso de escada vire a esquerda\n";
-    cout << "dê dois passos e vire a esquerda novamente\n";
+    cout << "dÃª dois passos e vire a esquerda novamente\n";
     cout << "suba o restante da escada\n";
     cout << "vire para direita\n";
     cout << "siga em frente\n";
@@ -33,42 +35,42 @@ void exercise0102()
 
 void exercise0103()
 {
-    cout << "Como ir do quarto até o quintal da minha casa\n";
+    cout << "Como ir do quarto atÃ© o quintal da minha casa\n";
     cout << "\n";
     cout << "vire para a direita\n";
-    cout << "siga em frente até não poder mais\n";
+    cout << "siga em frente atÃ© nÃ£o poder mais\n";
     cout << "vire a direita\n";
-    cout << "desça seis degrais de escada\n";
+    cout << "desÃ§a seis degrais de escada\n";
     cout << "vire 45 graus para direita\n";
-    cout << "sigua em frente até a porta\n";
+    cout << "sigua em frente atÃ© a porta\n";
     cout << "vire mais 45 para a direita\n";
-    cout << "dê mais 3 passos\n";
+    cout << "dÃª mais 3 passos\n";
 }
 
 void exercise0104()
 {
-    cout << "Como fazer um Gelado de pêssego\n\n";
-    cout << "Pegue um refratário\n";
-    cout << "adicione no refratário 1 envelope de gelatina em pó\n";
-    cout << " mais cinco colheres de sopa de água fria\n";
-    cout << "coloque água em uma panela menor que o refratário\n";
-    cout << "leve ao fogão e esquente a panela com a água\n";
-    cout << "coloque o refratário em cima da panela\n";
-    cout << "aguarde a água esquentar\n";
-    cout << "aguarde o vapor da água esquentar a mistura no refratário\n";
-    cout << "deixe o refratário aquecido até a mistura dissolver\n";
-    cout << "Pegue uma lata de pessêgo em calda\n";
-    cout << "abra a late e escorra o líquido\n";
+    cout << "Como fazer um Gelado de pÃªssego\n\n";
+    cout << "Pegue um refratÃ¡rio\n";
+    cout << "adicione no refratÃ¡rio 1 envelope de gelatina em pÃ³\n";
+    cout << " mais cinco colheres de sopa de Ã¡gua fria\n";
+    cout << "coloque Ã¡gua em uma panela menor que o refratÃ¡rio\n";
+    cout << "leve ao fogÃ£o e esquente a panela com a Ã¡gua\n";
+    cout << "coloque o refratÃ¡rio em cima da panela\n";
+    cout << "aguarde a Ã¡gua esquentar\n";
+    cout << "aguarde o vapor da Ã¡gua esquentar a mistura no refratÃ¡rio\n";
+    cout << "deixe o refratÃ¡rio aquecido atÃ© a mistura dissolver\n";
+    cout << "Pegue uma lata de pessÃªgo em calda\n";
+    cout << "abra a late e escorra o lÃ­quido\n";
     cout << "adicione no liquidificador os seguintes itens:\n";
-    cout << "	o pessêgo retirado da lata\n";
+    cout << "	o pessÃªgo retirado da lata\n";
     cout << "	leite condensado da lata\n";
     cout << "	creme de leite da lata\n";
-    cout << "	retire a mistura do refratário\n";
-    cout << "	meia xícara de água\n";
+    cout << "	retire a mistura do refratÃ¡rio\n";
+    cout << "	meia xÃ­cara de Ã¡gua\n";
     cout << "ligue o liquidificador e bata\n";
     cout << "retire a mistura do liquidificador\n";
-    cout << "divida a mistura em taças\n";
-    cout << "leve as taças à geladeira e aguarde 4 horas\n";
+    cout << "divida a mistura em taÃ§as\n";
+    cout << "leve as taÃ§as Ã  geladeira e aguarde 4 horas\n";
     cout << "\nSirva!\n";
 
     // TODO build a glossary of terms used.(What's a liquidificador?)
@@ -404,6 +406,22 @@ void odd_or_even()
         cout << "The value " << number << " is an even number.\n";
 }
 
+bool is_even(int number) {
+    // return true if is a even number
+    if (number % 2 == 0)
+        return true;
+    else
+        return false;
+}
+
+bool is_odd(int number) {
+    // return true if is a even number
+    if (number % 2 > 0)
+        return true;
+    else
+        return false;
+}
+
 void spell_to_digits()
 {
     // exercise 9
@@ -579,15 +597,6 @@ void growing_vector()
     v.push_back(5.6);
     v.push_back(7.9);
     cout << "v size: " << v.size() << '\n';
-}
-
-bool is_even(int number)
-{
-    // it is an even number?
-    if (number % 2)
-        return false;
-    else
-        return true;
 }
 
 void mean_temperatures()
@@ -874,11 +883,96 @@ void jokempo()
 
 }
 
-void prime_numbers()
+bool is_prime(int number)
+{
+    // exercise 11 and 12
+    // page 150
+
+    if (number <= 1)
+        return false;
+    else if (number == 2)
+        return true;
+
+    for (int i = 2; i < number-1; ++i)
+        if (number%i == 0)
+            return false;
+    return true;
+}
+
+bool is_multiple(int x, int y)
+{
+    // return true if x is multiple per y
+    if (x % y == 0)
+        return true;
+    else
+        return false;
+}
+
+bool sieve_eratosthenes(int number)
+{
+    // exercise 13
+    // page 150
+    // crivo de EratÃ³stenes
+
+    vector<int> number_list;
+    // vector map, maps the noon prime numbers.
+    vector<bool> prime_map;
+    bool prime_true = true;
+    bool prime_false = false;
+    constexpr int prime_begin = 2;
+
+    if (number <= 1)
+        return false;
+    else if (number == 2)
+        return true;
+
+    for (int i = 1; i < number; ++i) {
+        number_list.push_back(i);
+        prime_map.push_back(prime_true);
+    }
+    int prime_index = 0;
+    int near_prime = number_list[prime_index];
+    int number_list_size = number_list.size();
+
+    // if came to here the number was not discarted
+
+    while (true) {
+        if (number == near_prime)
+            return true;
+        else if (is_multiple(number, near_prime))
+            return false;
+        else
+            ++prime_index;
+        int i = prime_index;
+
+        for (int i = prime_index; i < number_list_size; ++i) {
+            if (is_multiple(number_list[i], near_prime)) {
+                if (number == number_list[i])
+                    return false;
+                prime_map[i] = prime_false;
+            }
+        }
+        near_prime = number_list[prime_index];
+    }
+}
+
+void list_prime_numbers(int number)
 {
     // exercise 11 and 12
     // page 149
-    // TODO
+
+    const int max = number;
+    vector<int> prime_numbers;
+
+    for (int i = 0; i < max; ++i) {
+        if (sieve_eratosthenes(i)) {
+            prime_numbers.push_back(i);
+            cout << i << '\n';
+        }
+    }
+
+    for (int x : prime_numbers)
+        cout << x << '\n';
 }
 
 void prime_numbers_v2()
@@ -927,8 +1021,10 @@ void name_score()
 
 int main()
 {
-    setlocale(LC_ALL, "portuguese"); // decodifica acentos em português
-    jokempo();
+    setlocale(LC_ALL, "portuguese"); // decodifica acentos em portuguÃªs
+    //int n = 97;
+    //cout << n << '\n' << sieve_eratosthenes(n) << '\n';
+    list_prime_numbers(100);
     keep_window_open();
     return 1;
 }
